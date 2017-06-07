@@ -35,6 +35,16 @@ class ItemTests: XCTestCase {
         XCTAssertEqual(15, sut.quality)
     }
     
+    func test_description_isCorrect() {
+        sut = .create(name: "sword")
+        XCTAssertEqual("sword, 0, 0", sut.description)
+    }
+    
+    func test_description_isNotHardcoded() {
+        sut = .create(name: "r", sellIn: 2, quality: 48)
+        XCTAssertEqual("r, 2, 48", sut.description)
+    }
+    
 }
 
 private extension Item {
