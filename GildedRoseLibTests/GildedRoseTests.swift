@@ -31,4 +31,11 @@ class GildedRoseTests: XCTestCase {
         XCTAssertEqual(0, sut.items[0].quality)
     }
 
+    func test_updateQuality_itemQualityIs0_doesNotReduce() {
+        let items: [Item] = [.create(quality: 0)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(0, sut.items[0].quality)
+    }
+
 }
