@@ -37,5 +37,26 @@ class GildedRoseTests: XCTestCase {
         sut.updateQuality()
         XCTAssertEqual(0, sut.items[0].quality)
     }
+    
+    func test_updateQuality_inDateAgedBrie_qualityIncreasesBy1() {
+        let items: [Item] = [.create(name: "Aged Brie", sellIn: 5)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(1, sut.items[0].quality)
+    }
+    
+    func test_updateQuality_outOfDateAgedBrie_qualityIncreasesBy2() {
+        let items: [Item] = [.create(name: "Aged Brie")]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(2, sut.items[0].quality)
+    }
+    
+    func test_updateQuality_agedBrieQuality50_doesNotIncrease() {
+        let items: [Item] = [.create(name: "Aged Brie", quality: 50)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(50, sut.items[0].quality)
+    }
 
 }
