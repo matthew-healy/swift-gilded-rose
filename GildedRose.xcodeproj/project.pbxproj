@@ -12,8 +12,6 @@
 		34ABFBDC1EE82F520048F329 /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDA1EE82F520048F329 /* GildedRose.swift */; };
 		34ABFBDD1EE82F520048F329 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDB1EE82F520048F329 /* Item.swift */; };
 		OBJ_27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* main.swift */; };
-		OBJ_34 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GildedRoseTests.swift */; };
-		OBJ_41 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GildedRoseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +40,6 @@
 		34ABFBDA1EE82F520048F329 /* GildedRose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
 		34ABFBDB1EE82F520048F329 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		OBJ_10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_13 /* GildedRoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRoseTests.swift; sourceTree = "<group>"; };
-		OBJ_15 /* GildedRoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRoseTests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* GildedRose */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = GildedRose; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_18 /* swiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_19 /* GildedRoseTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GildedRoseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,33 +105,6 @@
 			path = GildedRoseLibTests;
 			sourceTree = "<group>";
 		};
-		OBJ_11 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_12 /* swiftTests */,
-				OBJ_14 /* GildedRoseTests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_12 /* swiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_13 /* GildedRoseTests.swift */,
-			);
-			name = swiftTests;
-			path = Tests/swiftTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_14 /* GildedRoseTests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_15 /* GildedRoseTests.swift */,
-			);
-			name = GildedRoseTests;
-			path = Tests/GildedRoseTests;
-			sourceTree = SOURCE_ROOT;
-		};
 		OBJ_16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +122,6 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_11 /* Tests */,
 				34ABFBC41EE82EFF0048F329 /* GildedRoseLib */,
 				34ABFBCF1EE82EFF0048F329 /* GildedRoseLibTests */,
 				OBJ_16 /* Products */,
@@ -355,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_34 /* GildedRoseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_41 /* GildedRoseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
