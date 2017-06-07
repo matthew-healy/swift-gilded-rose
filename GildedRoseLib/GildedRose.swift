@@ -1,4 +1,3 @@
-
 public class GildedRose {
     var items:[Item]
     
