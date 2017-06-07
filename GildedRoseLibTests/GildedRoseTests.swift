@@ -4,6 +4,7 @@ import XCTest
 class GildedRoseTests: XCTestCase {
 
     private let brieName = "Aged Brie"
+    private let passesName = "Backstage passes to a TAFKAL80ETC concert"
     private let sulfuras = Item(
         name: "Sulfuras, Hand of Ragnaros",
         sellIn: 15,
@@ -76,6 +77,34 @@ class GildedRoseTests: XCTestCase {
         let sut = GildedRose(items: [sulfuras])
         sut.updateQuality()
         XCTAssertEqual(80, sut.items[0].quality)
+    }
+    
+    func test_updateQuality_backstagePasses_sellIn15_qualityIncreasesBy1() {
+        let items: [Item] = [.create(name: passesName, sellIn: 15)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(1, sut.items[0].quality)
+    }
+    
+    func test_updateQuality_backstagePasses_sellIn10_qualityIncreasesBy2() {
+        let items: [Item] = [.create(name: passesName, sellIn: 10)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(2, sut.items[0].quality)
+    }
+    
+    func test_updateQuality_backstagePasses_sellIn5_qualityIncreasesBy3() {
+        let items: [Item] = [.create(name: passesName, sellIn: 5)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(3, sut.items[0].quality)
+    }
+    
+    func test_updateQuality_backstagePasses_sellIn0_qualityDecreasesTo0() {
+        let items: [Item] = [.create(name: passesName, quality: 10)]
+        let sut = GildedRose(items: items)
+        sut.updateQuality()
+        XCTAssertEqual(0, sut.items[0].quality)
     }
 
 }
