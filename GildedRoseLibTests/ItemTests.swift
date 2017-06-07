@@ -47,7 +47,7 @@ class ItemTests: XCTestCase {
     
 }
 
-private extension Item {
+extension Item {
     static func create(
         name: String = "",
         sellIn: Int = 0,

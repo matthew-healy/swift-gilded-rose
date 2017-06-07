@@ -11,6 +11,7 @@
 		34ABFBDC1EE82F520048F329 /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDA1EE82F520048F329 /* GildedRose.swift */; };
 		34ABFBDD1EE82F520048F329 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDB1EE82F520048F329 /* Item.swift */; };
 		34ABFBDF1EE831380048F329 /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDE1EE831380048F329 /* ItemTests.swift */; };
+		34ABFBE11EE835160048F329 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBE01EE835160048F329 /* GildedRoseTests.swift */; };
 		OBJ_27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		34ABFBDA1EE82F520048F329 /* GildedRose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
 		34ABFBDB1EE82F520048F329 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		34ABFBDE1EE831380048F329 /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
+		34ABFBE01EE835160048F329 /* GildedRoseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRoseTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_17 /* GildedRose */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = GildedRose; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_18 /* swiftTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 			children = (
 				34ABFBD21EE82EFF0048F329 /* Info.plist */,
 				34ABFBDE1EE831380048F329 /* ItemTests.swift */,
+				34ABFBE01EE835160048F329 /* GildedRoseTests.swift */,
 			);
 			path = GildedRoseLibTests;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34ABFBDF1EE831380048F329 /* ItemTests.swift in Sources */,
+				34ABFBE11EE835160048F329 /* GildedRoseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
