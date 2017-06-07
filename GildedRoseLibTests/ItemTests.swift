@@ -15,6 +15,16 @@ class ItemTests: XCTestCase {
         XCTAssertEqual("defg", sut.name)
     }
     
+    func test_sellIn() {
+        sut = .create(sellIn: 5)
+        XCTAssertEqual(5, sut.sellIn)
+    }
+    
+    func test_sellIn_isNotHardcoded() {
+        sut = .create(sellIn: 10)
+        XCTAssertEqual(10, sut.sellIn)
+    }
+    
 }
 
 private extension Item {
