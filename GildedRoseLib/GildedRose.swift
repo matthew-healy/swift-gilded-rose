@@ -68,7 +68,7 @@ public class GildedRose {
     }
 }
 
-fileprivate extension Item {
+private extension Item {
     var isLegendary: Bool {
         return name == sulfurasName
     }
