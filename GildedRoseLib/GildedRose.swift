@@ -1,8 +1,3 @@
-private let sulfurasName = "Sulfuras, Hand of Ragnaros"
-private let passesName = "Backstage passes to a TAFKAL80ETC concert"
-private let brieName = "Aged Brie"
-
-
 public class GildedRose {
     var items:[Item]
     
@@ -21,7 +16,7 @@ public class GildedRose {
             item.updateQuality(by: -1)
         } else {
             item.updateQuality(by: 1)
-            if (item.name == passesName) {
+            if (item.name == LegacyItemIdentifier.passes) {
                 if (item.sellIn < 11) {
                     item.updateQuality(by: 1)
                 }
@@ -35,8 +30,8 @@ public class GildedRose {
         decreaseSellInForNonLegendaryItem(item)
 
         if (item.sellIn < 0) {
-            if (item.name != brieName) {
-                if (item.name != passesName) {
+            if (item.name != LegacyItemIdentifier.brie) {
+                if (item.name != LegacyItemIdentifier.passes) {
                     item.updateQuality(by: -1)
                 } else {
                     item.quality = 0
@@ -56,11 +51,13 @@ public class GildedRose {
 
 private extension Item {
     var isLegendary: Bool {
-        return name == sulfurasName
+        return name == LegacyItemIdentifier.sulfuras
     }
 
     var hasStandardQualityRules: Bool {
-        return name != passesName && name != brieName && !isLegendary
+        return name != LegacyItemIdentifier.passes
+            && name != LegacyItemIdentifier.brie
+            && !isLegendary
     }
 
     func updateQuality(by modifier: Int) {
