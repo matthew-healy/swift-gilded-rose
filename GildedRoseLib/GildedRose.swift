@@ -27,7 +27,7 @@ public class GildedRose {
             }
         }
 
-        updateSellIn(for: item)
+        item.updateSellIn()
 
         if (item.sellIn < 0) {
             if (item.name != LegacyItemIdentifier.brie) {
@@ -40,11 +40,6 @@ public class GildedRose {
                 item.updateQuality(by: 1)
             }
         }
-    }
-
-    private func updateSellIn(for item: Item) {
-        guard !item.isLegendary else { return }
-        item.sellIn -= 1
     }
 }
 
@@ -63,5 +58,10 @@ private extension Item {
         guard !isLegendary else { return }
         let newQuality = quality + modifier
         quality = newQuality.clamped(to: 0...50)
+    }
+
+    func updateSellIn() {
+        guard !isLegendary else { return }
+        sellIn -= 1
     }
 }

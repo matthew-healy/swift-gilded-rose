@@ -77,8 +77,8 @@
 				34ABFBE21EE981DB0048F329 /* Extensions */,
 				34ABFBDA1EE82F520048F329 /* GildedRose.swift */,
 				34ABFBDB1EE82F520048F329 /* Item.swift */,
-				34ABFBC61EE82EFF0048F329 /* Info.plist */,
 				34ABFBE81EE99C720048F329 /* LegacyItemIdentifier.swift */,
+				34ABFBC61EE82EFF0048F329 /* Info.plist */,
 			);
 			path = GildedRoseLib;
 			sourceTree = "<group>";
