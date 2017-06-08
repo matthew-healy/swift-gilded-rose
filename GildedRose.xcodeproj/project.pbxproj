@@ -12,6 +12,8 @@
 		34ABFBDD1EE82F520048F329 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDB1EE82F520048F329 /* Item.swift */; };
 		34ABFBDF1EE831380048F329 /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBDE1EE831380048F329 /* ItemTests.swift */; };
 		34ABFBE11EE835160048F329 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBE01EE835160048F329 /* GildedRoseTests.swift */; };
+		34ABFBE41EE981E30048F329 /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBE31EE981E30048F329 /* Integer.swift */; };
+		34ABFBE71EE982130048F329 /* IntegerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABFBE61EE982130048F329 /* IntegerTests.swift */; };
 		OBJ_27 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		34ABFBDB1EE82F520048F329 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		34ABFBDE1EE831380048F329 /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 		34ABFBE01EE835160048F329 /* GildedRoseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRoseTests.swift; sourceTree = "<group>"; };
+		34ABFBE31EE981E30048F329 /* Integer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
+		34ABFBE61EE982130048F329 /* IntegerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerTests.swift; sourceTree = "<group>"; };
 		OBJ_10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_17 /* GildedRose */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = GildedRose; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		34ABFBC41EE82EFF0048F329 /* GildedRoseLib */ = {
 			isa = PBXGroup;
 			children = (
+				34ABFBE21EE981DB0048F329 /* Extensions */,
 				34ABFBDA1EE82F520048F329 /* GildedRose.swift */,
 				34ABFBDB1EE82F520048F329 /* Item.swift */,
 				34ABFBC61EE82EFF0048F329 /* Info.plist */,
@@ -78,11 +83,28 @@
 		34ABFBCF1EE82EFF0048F329 /* GildedRoseLibTests */ = {
 			isa = PBXGroup;
 			children = (
+				34ABFBE51EE982040048F329 /* ExtensionsTests */,
 				34ABFBD21EE82EFF0048F329 /* Info.plist */,
 				34ABFBDE1EE831380048F329 /* ItemTests.swift */,
 				34ABFBE01EE835160048F329 /* GildedRoseTests.swift */,
 			);
 			path = GildedRoseLibTests;
+			sourceTree = "<group>";
+		};
+		34ABFBE21EE981DB0048F329 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34ABFBE31EE981E30048F329 /* Integer.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		34ABFBE51EE982040048F329 /* ExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				34ABFBE61EE982130048F329 /* IntegerTests.swift */,
+			);
+			path = ExtensionsTests;
 			sourceTree = "<group>";
 		};
 		OBJ_16 /* Products */ = {
@@ -95,7 +117,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -104,7 +126,6 @@
 				34ABFBCF1EE82EFF0048F329 /* GildedRoseLibTests */,
 				OBJ_16 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -207,7 +228,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34ABFBE41EE981E30048F329 /* Integer.swift in Sources */,
 				34ABFBDD1EE82F520048F329 /* Item.swift in Sources */,
 				34ABFBDC1EE82F520048F329 /* GildedRose.swift in Sources */,
 			);
@@ -252,6 +274,7 @@
 			files = (
 				34ABFBDF1EE831380048F329 /* ItemTests.swift in Sources */,
 				34ABFBE11EE835160048F329 /* GildedRoseTests.swift in Sources */,
+				34ABFBE71EE982130048F329 /* IntegerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +598,7 @@
 				34ABFBD51EE82EFF0048F329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		34ABFBD91EE82EFF0048F329 /* Build configuration list for PBXNativeTarget "GildedRoseLibTests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +607,7 @@
 				34ABFBD71EE82EFF0048F329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		OBJ_2 /* Build configuration list for PBXProject "GildedRose" */ = {
 			isa = XCConfigurationList;
