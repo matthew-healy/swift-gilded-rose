@@ -18,10 +18,8 @@ public class GildedRose {
 
     private func updateQuality(of item: Item) {
         if item.hasStandardQualityRules {
-            if (item.quality > 0) {
-                if !item.isLegendary {
-                    item.quality -= 1
-                }
+            if item.hasValue {
+                item.quality -= 1
             }
         } else {
             if (item.quality < 50) {
@@ -48,7 +46,7 @@ public class GildedRose {
         if (item.sellIn < 0) {
             if (item.name != brieName) {
                 if (item.name != passesName) {
-                    if (item.quality > 0) {
+                    if item.hasValue {
                         if !item.isLegendary {
                             item.quality -= 1
                         }
@@ -77,6 +75,10 @@ private extension Item {
     }
 
     var hasStandardQualityRules: Bool {
-        return name != passesName && name != brieName
+        return name != passesName && name != brieName && !isLegendary
+    }
+
+    var hasValue: Bool {
+        return quality > 0
     }
 }
