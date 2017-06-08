@@ -27,7 +27,7 @@ public class GildedRose {
             }
         }
 
-        decreaseSellInForNonLegendaryItem(item)
+        updateSellIn(for: item)
 
         if (item.sellIn < 0) {
             if (item.name != LegacyItemIdentifier.brie) {
@@ -42,10 +42,9 @@ public class GildedRose {
         }
     }
 
-    private func decreaseSellInForNonLegendaryItem(_ item: Item) {
-        if !item.isLegendary {
-            item.sellIn -= 1
-        }
+    private func updateSellIn(for item: Item) {
+        guard !item.isLegendary else { return }
+        item.sellIn -= 1
     }
 }
 
