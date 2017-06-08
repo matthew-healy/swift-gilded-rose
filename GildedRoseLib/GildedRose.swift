@@ -18,25 +18,16 @@ public class GildedRose {
 
     private func updateQuality(of item: Item) {
         if item.hasStandardQualityRules {
-            if item.hasValue {
-                item.quality -= 1
-            }
+            item.updateQuality(by: -1)
         } else {
-            if (item.quality < 50) {
-                item.quality += 1
+            item.updateQuality(by: 1)
+            if (item.name == passesName) {
+                if (item.sellIn < 11) {
+                    item.updateQuality(by: 1)
+                }
 
-                if (item.name == passesName) {
-                    if (item.sellIn < 11) {
-                        if (item.quality < 50) {
-                            item.quality += 1
-                        }
-                    }
-
-                    if (item.sellIn < 6) {
-                        if (item.quality < 50) {
-                            item.quality += 1
-                        }
-                    }
+                if (item.sellIn < 6) {
+                    item.updateQuality(by: 1)
                 }
             }
         }
@@ -46,18 +37,12 @@ public class GildedRose {
         if (item.sellIn < 0) {
             if (item.name != brieName) {
                 if (item.name != passesName) {
-                    if item.hasValue {
-                        if !item.isLegendary {
-                            item.quality -= 1
-                        }
-                    }
+                    item.updateQuality(by: -1)
                 } else {
                     item.quality = 0
                 }
             } else {
-                if (item.quality < 50) {
-                    item.quality += 1
-                }
+                item.updateQuality(by: 1)
             }
         }
     }
@@ -78,7 +63,9 @@ private extension Item {
         return name != passesName && name != brieName && !isLegendary
     }
 
-    var hasValue: Bool {
-        return quality > 0
+    func updateQuality(by modifier: Int) {
+        guard !isLegendary else { return }
+        let newQuality = quality + modifier
+        quality = newQuality.clamped(to: 0...50)
     }
 }
