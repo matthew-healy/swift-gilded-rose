@@ -1,10 +1,9 @@
 private let sulfurasName = "Sulfuras, Hand of Ragnaros"
+private let passesName = "Backstage passes to a TAFKAL80ETC concert"
+private let brieName = "Aged Brie"
 
 
 public class GildedRose {
-    private let passesName = "Backstage passes to a TAFKAL80ETC concert"
-    private let brieName = "Aged Brie"
-    
     var items:[Item]
     
     required public init(items:[Item]) {
