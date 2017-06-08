@@ -12,57 +12,61 @@ public class GildedRose {
     
     public func updateQuality() {
         for i in 0..<items.count {
-            if (items[i].name != brieName && items[i].name != passesName) {
-                if (items[i].quality > 0) {
-                    if !items[i].isLegendary {
-                        items[i].quality -= 1
-                    }
-                }
-            } else {
-                if (items[i].quality < 50) {
-                    items[i].quality += 1
-                    
-                    if (items[i].name == passesName) {
-                        if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
-                                items[i].quality += 1
-                            }
-                        }
-                        
-                        if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
-                                items[i].quality += 1
-                            }
-                        }
-                    }
+            updateQuality(of: items[i])
+        }
+    }
+
+    private func updateQuality(of item: Item) {
+        if item.hasStandardQualityRules {
+            if (item.quality > 0) {
+                if !item.isLegendary {
+                    item.quality -= 1
                 }
             }
-            
-            decreaseSellInForNonLegendaryItem(atIndex: i)
-            
-            if (items[i].sellIn < 0) {
-                if (items[i].name != brieName) {
-                    if (items[i].name != passesName) {
-                        if (items[i].quality > 0) {
-                            if !items[i].isLegendary {
-                                items[i].quality -= 1
-                            }
+        } else {
+            if (item.quality < 50) {
+                item.quality += 1
+
+                if (item.name == passesName) {
+                    if (item.sellIn < 11) {
+                        if (item.quality < 50) {
+                            item.quality += 1
                         }
-                    } else {
-                        items[i].quality = 0
                     }
-                } else {
-                    if (items[i].quality < 50) {
-                        items[i].quality += 1
+
+                    if (item.sellIn < 6) {
+                        if (item.quality < 50) {
+                            item.quality += 1
+                        }
                     }
                 }
             }
         }
+
+        decreaseSellInForNonLegendaryItem(item)
+
+        if (item.sellIn < 0) {
+            if (item.name != brieName) {
+                if (item.name != passesName) {
+                    if (item.quality > 0) {
+                        if !item.isLegendary {
+                            item.quality -= 1
+                        }
+                    }
+                } else {
+                    item.quality = 0
+                }
+            } else {
+                if (item.quality < 50) {
+                    item.quality += 1
+                }
+            }
+        }
     }
-    
-    private func decreaseSellInForNonLegendaryItem(atIndex i: Int) {
-        if !items[i].isLegendary {
-            items[i].sellIn -= 1
+
+    private func decreaseSellInForNonLegendaryItem(_ item: Item) {
+        if !item.isLegendary {
+            item.sellIn -= 1
         }
     }
 }
@@ -70,5 +74,9 @@ public class GildedRose {
 private extension Item {
     var isLegendary: Bool {
         return name == sulfurasName
+    }
+
+    var hasStandardQualityRules: Bool {
+        return name != passesName && name != brieName
     }
 }
