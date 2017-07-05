@@ -1,7 +1,7 @@
 public class GildedRose {
-    var items:[Item]
+    var items:[Legacy.Item]
     
-    required public init(items:[Item]) {
+    required public init(items:[Legacy.Item]) {
         self.items = items
     }
     
@@ -11,7 +11,7 @@ public class GildedRose {
         }
     }
 
-    private func updateQuality(of item: Item) {
+    private func updateQuality(of item: Legacy.Item) {
         if item.hasStandardQualityRules {
             item.updateQuality(by: -1)
         } else {
@@ -43,7 +43,7 @@ public class GildedRose {
     }
 }
 
-private extension Item {
+private extension Legacy.Item {
     var isLegendary: Bool {
         return name == LegacyItemIdentifier.sulfuras
     }

@@ -3,7 +3,7 @@ import XCTest
 
 class ItemTests: XCTestCase {
     
-    var sut: Item!
+    var sut: Legacy.Item!
     
     func test_name() {
         sut = .create(name: "abc")
@@ -47,13 +47,13 @@ class ItemTests: XCTestCase {
     
 }
 
-extension Item {
+extension Legacy.Item {
     static func create(
         name: String = "",
         sellIn: Int = 0,
         quality: Int = 0
-    ) -> Item {
-        return Item(
+    ) -> Legacy.Item {
+        return Legacy.Item(
             name: name,
             sellIn: sellIn,
             quality: quality
