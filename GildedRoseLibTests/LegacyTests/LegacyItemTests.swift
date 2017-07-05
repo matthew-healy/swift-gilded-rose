@@ -1,7 +1,7 @@
 import XCTest
 @testable import GildedRoseLib
 
-class ItemTests: XCTestCase {
+class LegacyItemTests: XCTestCase {
     
     var sut: Legacy.Item!
     
