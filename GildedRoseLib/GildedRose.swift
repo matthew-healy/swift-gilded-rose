@@ -16,7 +16,7 @@ public class GildedRose {
             item.updateQuality(by: -1)
         } else {
             item.updateQuality(by: 1)
-            if (item.name == LegacyItemIdentifier.passes) {
+            if (item.name == Legacy.ItemIdentifier.passes) {
                 if (item.sellIn < 11) {
                     item.updateQuality(by: 1)
                 }
@@ -30,8 +30,8 @@ public class GildedRose {
         item.updateSellIn()
 
         if (item.sellIn < 0) {
-            if (item.name != LegacyItemIdentifier.brie) {
-                if (item.name != LegacyItemIdentifier.passes) {
+            if (item.name != Legacy.ItemIdentifier.brie) {
+                if (item.name != Legacy.ItemIdentifier.passes) {
                     item.updateQuality(by: -1)
                 } else {
                     item.quality = 0
@@ -45,12 +45,12 @@ public class GildedRose {
 
 private extension Legacy.Item {
     var isLegendary: Bool {
-        return name == LegacyItemIdentifier.sulfuras
+        return name == Legacy.ItemIdentifier.sulfuras
     }
 
     var hasStandardQualityRules: Bool {
-        return name != LegacyItemIdentifier.passes
-            && name != LegacyItemIdentifier.brie
+        return name != Legacy.ItemIdentifier.passes
+            && name != Legacy.ItemIdentifier.brie
             && !isLegendary
     }
 
