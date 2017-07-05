@@ -71,13 +71,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		285F4D931F0CD07B0096F57C /* Legacy */ = {
+			isa = PBXGroup;
+			children = (
+				34ABFBDB1EE82F520048F329 /* Item.swift */,
+				34ABFBE81EE99C720048F329 /* LegacyItemIdentifier.swift */,
+			);
+			path = Legacy;
+			sourceTree = "<group>";
+		};
+		285F4D941F0CD08C0096F57C /* LegacyTests */ = {
+			isa = PBXGroup;
+			children = (
+				34ABFBDE1EE831380048F329 /* ItemTests.swift */,
+			);
+			path = LegacyTests;
+			sourceTree = "<group>";
+		};
 		34ABFBC41EE82EFF0048F329 /* GildedRoseLib */ = {
 			isa = PBXGroup;
 			children = (
+				285F4D931F0CD07B0096F57C /* Legacy */,
 				34ABFBE21EE981DB0048F329 /* Extensions */,
 				34ABFBDA1EE82F520048F329 /* GildedRose.swift */,
-				34ABFBDB1EE82F520048F329 /* Item.swift */,
-				34ABFBE81EE99C720048F329 /* LegacyItemIdentifier.swift */,
 				34ABFBC61EE82EFF0048F329 /* Info.plist */,
 			);
 			path = GildedRoseLib;
@@ -86,9 +102,9 @@
 		34ABFBCF1EE82EFF0048F329 /* GildedRoseLibTests */ = {
 			isa = PBXGroup;
 			children = (
+				285F4D941F0CD08C0096F57C /* LegacyTests */,
 				34ABFBE51EE982040048F329 /* ExtensionsTests */,
 				34ABFBD21EE82EFF0048F329 /* Info.plist */,
-				34ABFBDE1EE831380048F329 /* ItemTests.swift */,
 				34ABFBE01EE835160048F329 /* GildedRoseTests.swift */,
 			);
 			path = GildedRoseLibTests;
